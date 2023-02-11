@@ -12,26 +12,28 @@ namespace Exercise3._10_3
         static void Main(string[] args)
         //Проверка простого числа
         {
-            int age = 0;
-            int i = 2;
-            
+            int del = 2;                    // Делитель
+            bool flag = false;
             WriteLine("Введите число:");
-            age = int.Parse(ReadLine());
+            int age = int.Parse(ReadLine());
 
-            while (i <= age)
+            while (del < age)
             {
-                if (age % i == 0 && age % age == 0)
-                {
-                    WriteLine($"Число {age} не простое");
+                flag = (age % del == 0);
+                if (flag == true)
+                {                    
                     break;
                 }
-                else
-                {
-                    WriteLine($"Число {age} простое");
-                    break;
-                }
+                del++;
             }
-            WriteLine();
+            if (flag == true)
+            
+                WriteLine($"Число {age} не простое");
+            
+            else
+            
+                WriteLine($"Число {age} простое");
+            
         }
     }
 }
