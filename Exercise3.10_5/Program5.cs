@@ -31,7 +31,7 @@ namespace Exercise3._10_5
                 if (f == string.Empty)
                 {
                     userNamber = 0;
-                    //  c = false;
+                    WriteLine($"Проиграл, загаданное число: {rNamber}");
                     break;
                 }
                 else
